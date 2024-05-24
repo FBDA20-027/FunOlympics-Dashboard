@@ -68,6 +68,7 @@ countries = sorted(data['country'].unique())
 
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.PULSE])
+server = app.server
 
 # define dashboard layout
 app.layout = html.Div([
@@ -561,4 +562,4 @@ def update_most_popular_sporting_event(selected_countries, selected_continents):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=False)
